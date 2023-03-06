@@ -6,15 +6,20 @@
     <h1>Sign Up Here</h1>
     <form [formGroup]="signUpData" (ngSubmit)="submitData()"  >
       <div><label>Name:</label>
-        <input formControlName="name" type="text" placeholder="Your name"></div>
+        <input formControlName="name" type="text" placeholder="Your name"></div><span *ngIf="name&&name.touched&&name.invalid" style="color: red;">Please enter a valid Name!</span>
         <div><label>Email:</label>
-          <input formControlName="email" type="email" placeholder="Your email"></div>
+          <input formControlName="email" type="email" placeholder="Your email">
+        </div>
+        <span *ngIf="email&&email.invalid&&email.touched" style="color: red;">Please enter a valid Email!</span>
           <div><label>Company:</label>
             <input formControlName="company" type="text" placeholder="Company name"></div>
             <div><label>Password:</label>
-              <input formControlName="password" type="password" placeholder="Enter password"></div>
+              <input formControlName="password" type="password" placeholder="Enter password"></div><span *ngIf="password&&password.invalid&&password.touched" style="color: red;">Please enter a valid Password!</span>
               <div><label>Confirm Password:</label>
-                <input formControlName="confirmPassword" type="password" placeholder="Confirm password"></div>
-               <div> <input type="submit" routerLink="/dashboard" ></div>
+                <input formControlName="confirmPassword" type="password" placeholder="Confirm password">
+              </div>
+              <span *ngIf="confirmPassword.touched&&confirmPassword.value!=password.value
+              " style="color: red;">Password must Match!</span>
+               <div> <input [disabled]="signUpData.invalid" type="submit" routerLink="/dashboard" ></div>
     </form>
 

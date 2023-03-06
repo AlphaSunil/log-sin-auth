@@ -19,6 +19,15 @@ export class LoginComponent implements OnInit {
 
     })
   }
+
+
+  get email(){
+    return this.loginData.get('email')
+  }
+  get password(){
+    return this.loginData.get('password')
+  }
+
   submitData(){
 
     this.appService.sendData(this.loginData.value).subscribe({});

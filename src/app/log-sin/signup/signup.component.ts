@@ -20,7 +20,22 @@ export class SignupComponent implements OnInit {
     confirmPassword:new FormControl('',[Validators.required])
   })}
 
+  get name(){
+    return this.signUpData.get('name')
+  }
 
+  get email(){
+    return this.signUpData.get('email')
+  }
+  get password(){
+    return this.signUpData.get('password')
+  }
+
+
+
+  get confirmPassword(){
+    return this.signUpData.get('confirmPassword')
+  }
 
   submitData(){
   if(localStorage.getItem(this.signUpData.value.email)){

@@ -13,6 +13,7 @@ constructor(private appService:LogSinServiceService){
 
 authController(){
   this.appService.loggedIn=false
+
 }
 
 }

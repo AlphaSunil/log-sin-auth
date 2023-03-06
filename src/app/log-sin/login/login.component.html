@@ -5,8 +5,13 @@
     <h1>Login Here</h1>
     <form [formGroup]="loginData" (ngSubmit)="submitData()">
   <div><label>Email:</label>
-    <input formControlName="email" type="email" placeholder="Your email"></div>
+    <input formControlName="email" type="email" placeholder="Your email">
+ </div>
+ <span *ngIf="email&&email.invalid&&email.touched" style="color: red;">Please enter a valid Email!</span>
     <div><label>Password:</label>
-      <input formControlName="password" type="password" placeholder="Enter password"></div>
-      <div><input type="submit" routerLink="/dashboard"></div>
+      <input formControlName="password" type="password" placeholder="Enter password">
+    </div>
+    <span *ngIf="password&&password.invalid&&password.touched" style="color: red;">Please enter a valid Password!</span>
+      <div><input [disabled]="loginData.invalid" type="submit" routerLink="/dashboard"></div>
   </form>
+
