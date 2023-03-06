@@ -1,0 +1,21 @@
+.dash-body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+  background-color: burlywood;
+  width: 70%;
+}
+.sidebar{
+  width: 30%;
+  background-color: rgb(187, 139, 76);
+}
+
+.container{
+  display: flex;
+  height: 100vh;
+}
+
+
+
+

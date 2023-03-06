@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  height: 500px;
+  width: 500px;
+  margin: 0 auto;
+  background-color: burlywood;
+  color: brown;
+  border-radius: 10px;
+  margin-top: 50px;
+}
+
+form {
+  padding: 20px;
+  font-size: 30px;
+  font-weight: 400;
+}
+form span {
+  font-size: 20px;
+}
+input {
+  border: none;
+  padding: 10px 30px;
+  border-radius: 10px;
+}
+
+.tabs button {
+  width: 50%;
+  height: 50px;
+  background-color: rgb(68, 4, 4);
+  color: white;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+}
+
+.tabs button:hover {
+  background-color: brown;
+}
+
+.btn {
+  height: 40px;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(68, 4, 4);
+  color: white;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  margin-top: 50px;
+}
+button:hover {
+  background-color: brown;
+}
+
+h1{
+  color: rgb(84, 3, 3);
+  text-align: center;
+  margin-top: 5px;
+}
